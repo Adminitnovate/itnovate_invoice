@@ -6,7 +6,7 @@ class Settings(BaseSettings):
     huggingface_key: str = os.environ.get("HUGGINGFACE_KEY")
     sparrow_key: str = os.environ.get("SPARROW_KEY")
     secure_key: str = os.environ.get("SECURE_KEY")
-    dataset_name: str = "katanaml-org/invoices-donut-data-v1"
+    dataset_name: str = "MADHURIJ/InvoiceData"
     ocr_stats_file: str = "data/ocr_stats.json"
 
 

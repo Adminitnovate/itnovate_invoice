@@ -24,7 +24,7 @@ load_css()
 
 
 class Model:
-    menuTitle = "Sparrow"
+    menuTitle = "Invoice Automation"
     option1 = "Dashboard"
     option2 = "Data Annotation"
     option3 = "Model Training"

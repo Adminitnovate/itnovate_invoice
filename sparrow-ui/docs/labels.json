@@ -1,6 +1,16 @@
 {
   "labels": [
     {
+      "id": 18,
+      "name": "work_order_no",
+      "description": "Work Order No"
+    },
+    {
+      "id": 17,
+      "name": "work_order_date",
+      "description": "Work Order date"
+    },
+    {
       "id": 1,
       "name": "invoice_no",
       "description": "Invoice Number"

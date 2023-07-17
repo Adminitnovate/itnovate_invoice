@@ -20,8 +20,7 @@ class About:
         #             unsafe_allow_html=True)
 
         st.info(
-            'Tool for data extraction from PDFs, images, and other documents. It is a part of ML, '
-            'a platform for data science and machine learning.')
+            'Tool for data extraction from PDFs, images, and other documents.')
 
         icon_size = 20
 
@@ -30,4 +29,4 @@ class About:
         # st_button('twitter', 'https://twitter.com/andrejusb', 'Follow me on Twitter', icon_size)
         # st_button('medium', 'https://andrejusb.medium.com', 'Read my Blogs on Medium', icon_size)
         # st_button('linkedin', 'https://www.linkedin.com/in/andrej-baranovskij/', 'Follow me on LinkedIn', icon_size)
-        st_button('', 'https://itnovate.in', 'ITNovate', icon_size)
+        # st_button('', 'https://katanaml.io', 'Katana ML', icon_size)

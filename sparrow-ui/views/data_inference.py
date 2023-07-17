@@ -174,7 +174,7 @@ class DataInference:
             if submit:
                 button_placeholder.empty()
 
-                api_url = "https://katanaml-org-sparrow-ml.hf.space/api-inference/v1/sparrow-ml/inference"
+                api_url = "https://itnovaml-sparrow-ml-itn.hf.space/api-inference/v1/sparrow-ml/inference"
                 file_path = model.get_image_file()
 
                 with open(file_path, "rb") as file:

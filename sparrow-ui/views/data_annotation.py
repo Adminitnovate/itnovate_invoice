@@ -112,7 +112,7 @@ class DataAnnotation:
 
             completed_check = st.empty()
 
-            btn = st.button(model.export_labels_text)
+            btn = st.button(model.export_labels_text, disabled=True)
             if btn:
                 self.export_labels(model)
                 st.write(model.done_text)
@@ -122,8 +122,8 @@ class DataAnnotation:
             with st.form("upload-form", clear_on_submit=True):
                 uploaded_file = st.file_uploader(model.upload_button_text_desc, accept_multiple_files=False,
                                                  type=['png', 'jpg', 'jpeg'],
-                                                 help=model.upload_help)
-                submitted = st.form_submit_button(model.upload_button_text)
+                                                 help=model.upload_help, disabled=True)
+                submitted = st.form_submit_button(model.upload_button_text, disabled=True)
 
                 if submitted and uploaded_file is not None:
                     ret = self.upload_file(uploaded_file)
@@ -164,7 +164,7 @@ class DataAnnotation:
                 st.session_state["annotation_done"] = True
 
         with completed_check:
-            annotation_done = st.checkbox(model.completed_text, help=model.completed_help, key="annotation_done")
+            annotation_done = st.checkbox(model.completed_text, help=model.completed_help, key="annotation_done", disabled=True)
             if annotation_done:
                 saved_state['meta']['version'] = "v1.0"
             else:
@@ -246,7 +246,7 @@ class DataAnnotation:
                                           data_processor)
 
                     with toolbar:
-                        submit = st.form_submit_button(model.save_text, type="primary")
+                        submit = st.form_submit_button(model.save_text, type="primary", disabled=True)
                         if submit:
                             for word in result_rects.rects_data['words']:
                                 if len(word['value']) > 1000:
@@ -430,7 +430,7 @@ class DataAnnotation:
                 rows = response['selected_rows']
 
                 with toolbar:
-                    submit = st.form_submit_button(model.save_text, type="primary")
+                    submit = st.form_submit_button(model.save_text, type="primary", disabled=True)
                     if submit and len(rows) > 0:
                         # check if there are gaps in the selected rows
                         if len(rows) > 1:
@@ -548,15 +548,15 @@ class DataAnnotation:
             props = {
                 'buttons': {
                     'up': {
-                        'disabled': False,
+                        'disabled': True,
                         'rendered': ''
                     },
                     'down': {
-                        'disabled': False,
+                        'disabled': True,
                         'rendered': ''
                     },
                     'save': {
-                        'disabled': False,
+                        'disabled': True,
                         'rendered': ''
                         # 'rendered': 'none',
                     }
